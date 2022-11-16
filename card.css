@@ -1,0 +1,97 @@
+:root {
+    --gradient-background:rgba(34, 35, 48, 0.93) ;
+}
+body{
+    --gradient-right: rgba(109, 38, 44, 0.301);
+    --gradient-left: rgba(50, 255, 193, 0.103);
+    --gradient-background: rgba(34, 35, 48, 0.93);
+    --gradient-background-right: rgba(109, 38, 44, 0);
+    --gradient-background-left: rgba(50, 255, 193, 0.103);
+    --color-showcase-header: rgba(43, 45, 68, 0.93);
+    --gradient-showcase-header-left: rgba(115, 173, 184, 0.247);
+    --btn-background: rgba(43, 52, 68);
+    --btn-background-hover: rgb(53, 62, 78);
+    --btn-outline: rgb(93, 102, 118);
+}
+.ilkdiv{
+    max-height: 400;
+    max-width: 800;
+    display: block;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    max-height: 500;
+    max-width: 900;
+    margin: 0 auto;
+    background: radial-gradient( farthest-side at bottom right, var(--gradient-right), transparent 500px ), radial-gradient( farthest-corner at bottom left, var(--gradient-left), transparent 600px );
+    background-color: var(--gradient-background);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #969696;
+    font-family: "Motiva Sans",Arial,Helvetica,sans-serif;
+    gap: 40px;
+    justify-content: center;
+}
+.firstleft{
+    max-width: 250px;
+    padding: 10px;
+}
+.firstmid{
+    max-width: 300px;
+}
+.UserNick{
+    margin-top: 0px;
+    line-height: 40px;
+    font-size: 24px;
+    color: #ffffff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 200;
+}
+.firstright{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.leveltext{
+    line-height: 40px;
+    font-size: 24px;
+    color: #ffffff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 200;
+}
+.levelarea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.circleCSS{
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    border-radius: 50%;
+    background-color: white;
+}
+.circle{
+    margin: auto auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(34, 35, 48, 0.93);
+    text-align: center;
+}
+.area{
+    padding: 5px;
+}
+.OfflineColor{
+    background-color: gray;
+}

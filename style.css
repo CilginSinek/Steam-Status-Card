@@ -1,0 +1,52 @@
+:root {
+    --gradient-background:rgba(34, 35, 48, 0.93) ;
+}
+.connectcard{
+    background-color: black;
+    /* card ortalamadan önce */
+}
+.card-foto{
+    position: relative;
+    max-width: 1018px;
+    min-height: 224px;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.card-foto_texture{
+    max-width: 976px;
+    min-height: 224px;
+    margin: 0 auto;
+    background: radial-gradient( farthest-side at bottom right, var(--gradient-right), transparent 500px ), radial-gradient( farthest-corner at bottom left, var(--gradient-left), transparent 600px );
+    background-color: var(--gradient-background);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body{
+    --gradient-right: rgba(109, 38, 44, 0.301);
+    --gradient-left: rgba(50, 255, 193, 0.103);
+    --gradient-background: rgba(34, 35, 48, 0.93);
+    --gradient-background-right: rgba(109, 38, 44, 0);
+    --gradient-background-left: rgba(50, 255, 193, 0.103);
+    --color-showcase-header: rgba(43, 45, 68, 0.93);
+    --gradient-showcase-header-left: rgba(115, 173, 184, 0.247);
+    --btn-background: rgba(43, 52, 68);
+    --btn-background-hover: rgb(53, 62, 78);
+    --btn-outline: rgb(93, 102, 118);
+    color: #969696;
+    font-family: "Motiva Sans",Arial,Helvetica,sans-serif;
+}
+.card-foto_header{
+    position: relative;
+    max-width: 926px;
+    margin: 0 auto;
+    padding-top: 24px;
+}
+.card-foto_content{
+    position: relative;
+    padding-top: 8px;
+    padding-right: 8px;
+    color: #c4c4c4;
+    font-size: 13px;
+}

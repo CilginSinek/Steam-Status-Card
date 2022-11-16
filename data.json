@@ -1,0 +1,247 @@
+{
+    "response": {
+        "players": [
+            {
+                "steamid": "76561198238117304",
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "Azgın Sinek",
+                "profileurl": "https://steamcommunity.com/id/CilginSinek/",
+                "avatar": "https://avatars.akamai.steamstatic.com/59b273b95de538381e3680629c154ca323e85e1a.jpg",
+                "avatarmedium": "https://avatars.akamai.steamstatic.com/59b273b95de538381e3680629c154ca323e85e1a_medium.jpg",
+                "avatarfull": "https://avatars.akamai.steamstatic.com/59b273b95de538381e3680629c154ca323e85e1a_full.jpg",
+                "avatarhash": "59b273b95de538381e3680629c154ca323e85e1a",
+                "lastlogoff": 1668343385,
+                "personastate": 0,
+                "realname": "A",
+                "primaryclanid": "103582791429670253",
+                "timecreated": 1436358074,
+                "personastateflags": 0,
+                "loccountrycode": "TR",
+                "locstatecode": "34",
+                "loccityid": 44884
+            }
+        ]
+    }
+}
+
+{
+    "response": {
+        "badges": [
+            {
+                "badgeid": 13,
+                "level": 79,
+                "completion_time": 1667065215,
+                "xp": 293,
+                "scarcity": 15400717
+            },
+            {
+                "badgeid": 40,
+                "level": 1,
+                "completion_time": 1561753232,
+                "xp": 100,
+                "scarcity": 5548464
+            },
+            {
+                "badgeid": 33,
+                "level": 4,
+                "completion_time": 1546344340,
+                "xp": 100,
+                "scarcity": 3400326
+            },
+            {
+                "badgeid": 31,
+                "level": 4,
+                "completion_time": 1543054161,
+                "xp": 100,
+                "scarcity": 1388632
+            },
+            {
+                "badgeid": 2,
+                "level": 3,
+                "completion_time": 1538478029,
+                "xp": 500,
+                "scarcity": 8624692
+            },
+            {
+                "badgeid": 29,
+                "level": 5,
+                "completion_time": 1529848636,
+                "xp": 50,
+                "scarcity": 1115998
+            },
+            {
+                "badgeid": 28,
+                "level": 3,
+                "completion_time": 1527448168,
+                "xp": 500,
+                "scarcity": 380314
+            },
+            {
+                "badgeid": 21,
+                "level": 1,
+                "completion_time": 1515855477,
+                "xp": 100,
+                "scarcity": 31865548
+            },
+            {
+                "badgeid": 27,
+                "level": 4,
+                "completion_time": 1511547647,
+                "xp": 100,
+                "scarcity": 1275359
+            },
+            {
+                "badgeid": 1,
+                "level": 7,
+                "completion_time": 1436358074,
+                "xp": 350,
+                "scarcity": 87171334
+            },
+            {
+                "badgeid": 1,
+                "appid": 581620,
+                "level": 1,
+                "completion_time": 1516041160,
+                "xp": 100,
+                "communityitemid": "7098678830",
+                "border_color": 0,
+                "scarcity": 87875
+            },
+            {
+                "badgeid": 1,
+                "appid": 207140,
+                "level": 1,
+                "completion_time": 1530972338,
+                "xp": 100,
+                "communityitemid": "8568167829",
+                "border_color": 0,
+                "scarcity": 214183
+            },
+            {
+                "badgeid": 1,
+                "appid": 876740,
+                "level": 1,
+                "completion_time": 1530973841,
+                "xp": 100,
+                "communityitemid": "8568359447",
+                "border_color": 0,
+                "scarcity": 1175476
+            },
+            {
+                "badgeid": 1,
+                "appid": 4000,
+                "level": 1,
+                "completion_time": 1533580439,
+                "xp": 100,
+                "communityitemid": "8768117348",
+                "border_color": 0,
+                "scarcity": 1544930
+            },
+            {
+                "badgeid": 1,
+                "appid": 991980,
+                "level": 2,
+                "completion_time": 1545668534,
+                "xp": 200,
+                "communityitemid": "9683850555",
+                "border_color": 0,
+                "scarcity": 900982
+            },
+            {
+                "badgeid": 1,
+                "appid": 592660,
+                "level": 1,
+                "completion_time": 1624710655,
+                "xp": 100,
+                "communityitemid": "17472043619",
+                "border_color": 0,
+                "scarcity": 6991
+            },
+            {
+                "badgeid": 1,
+                "appid": 362680,
+                "level": 1,
+                "completion_time": 1634389639,
+                "xp": 100,
+                "communityitemid": "18549572336",
+                "border_color": 0,
+                "scarcity": 24217
+            },
+            {
+                "badgeid": 1,
+                "appid": 360940,
+                "level": 1,
+                "completion_time": 1654974670,
+                "xp": 100,
+                "communityitemid": "20880953665",
+                "border_color": 0,
+                "scarcity": 24003
+            },
+            {
+                "badgeid": 1,
+                "appid": 1069740,
+                "level": 1,
+                "completion_time": 1654975531,
+                "xp": 100,
+                "communityitemid": "20881029066",
+                "border_color": 0,
+                "scarcity": 40581
+            },
+            {
+                "badgeid": 1,
+                "appid": 322330,
+                "level": 1,
+                "completion_time": 1654975655,
+                "xp": 100,
+                "communityitemid": "20881029247",
+                "border_color": 0,
+                "scarcity": 711595
+            },
+            {
+                "badgeid": 1,
+                "appid": 1274570,
+                "level": 1,
+                "completion_time": 1654975855,
+                "xp": 100,
+                "communityitemid": "20881054858",
+                "border_color": 0,
+                "scarcity": 86682
+            },
+            {
+                "badgeid": 1,
+                "appid": 1057090,
+                "level": 1,
+                "completion_time": 1656885063,
+                "xp": 100,
+                "communityitemid": "21347700291",
+                "border_color": 0,
+                "scarcity": 63956
+            },
+            {
+                "badgeid": 1,
+                "appid": 1172620,
+                "level": 1,
+                "completion_time": 1659005776,
+                "xp": 100,
+                "communityitemid": "21651179474",
+                "border_color": 0,
+                "scarcity": 214439
+            },
+            {
+                "badgeid": 1,
+                "appid": 367520,
+                "level": 1,
+                "completion_time": 1668273623,
+                "xp": 100,
+                "communityitemid": "22497422266",
+                "border_color": 0,
+                "scarcity": 248629
+            }
+        ],
+        "player_xp": 3693,
+        "player_level": 22,
+        "player_xp_needed_to_level_up": 207,
+        "player_xp_needed_current_level": 3600
+    }
+}
