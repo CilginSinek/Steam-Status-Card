@@ -26,4 +26,6 @@ add Your steamid64 and Steam Web API key
 <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/AwayStatus.png"></img>
 
 ## Description
+-I using https://corsproxy.io/ for cors
+
 I'm still trying to show badges and games icons but that's all for now :p
