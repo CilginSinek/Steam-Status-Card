@@ -28,4 +28,6 @@ add Your steamid64 and Steam Web API key
 ## Description
 -I using https://corsproxy.io/ for cors
 
-I'm still trying to show badges and games icons but that's all for now :p
+I'm still trying to show badges icons but that's all for now :p
+If the game doesn't have an icon, my own icon will view.
+Themes and small version coming soon

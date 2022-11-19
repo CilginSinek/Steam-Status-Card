@@ -2,27 +2,22 @@ let Userid = "";
 // Ur own steam id64
 let webkey = ""
 // ur own steam web api key
+
+// URLS
 const sumaryUrl = `https://corsproxy.io/?https%3A%2F%2Fapi.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=${webkey}&steamids=${Userid}`
 const badgeUrl =`https://corsproxy.io/?https%3A%2F%2Fapi.steampowered.com/IPlayerService/GetSteamLevel/v1/?key=${webkey}&steamid=${Userid}`
 
 const gamesURL = `https://corsproxy.io/?https%3A%2F%2Fapi.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=${webkey}&format=json&steamid=${Userid}&include_appinfo=1`
 
+// FETCHS
 
-let summary = await fetch(sumaryUrl)
-.then(res => res.json())
-.then(data => {
-    return data
-});
+let summary = await fetch(sumaryUrl).then(res => res.json()).then(data => {return data});
 let level = await fetch(badgeUrl).then(res => res.json()).then(data => {return data});
-
 let mygame = await fetch(gamesURL).then(res => res.json()).then(data => {return data});
-console.log(level)
-console.log(summary)
 
+// FUNCTION
 
-
-
-function createAcard(userdata, leveldata) {
+function createAcard(userdata, leveldata, games) {
 
     //all card elements
 
@@ -34,6 +29,7 @@ function createAcard(userdata, leveldata) {
             avatarimg = document.createElement('img'),
 
         firstdivmidarea = document.createElement('div'),
+        gameimgarea = document.createElement('div'),
         nickarea = document.createElement('div'),
             usernick = document.createElement('div'),
 
@@ -47,11 +43,15 @@ function createAcard(userdata, leveldata) {
         isActive = document.createElement('div');
 
 
+    // appends and add class
+
     firstdiv.classList.add("first")
     
     const ilkdiv = document.querySelector(".Steamcard");
     
     ilkdiv.appendChild(firstdiv);
+
+    // MAIN DIVS
 
     firstdiv.appendChild(firstdivleftarea);
         firstdivleftarea.classList.add("firstleft");
@@ -60,13 +60,20 @@ function createAcard(userdata, leveldata) {
     firstdiv.appendChild(firstdivrightarea);
         firstdivrightarea.classList.add("firstright");
 
+        //LEFT DIVS
     firstdivleftarea.appendChild(avatarcolorarea);
     avatarcolorarea.appendChild(avatararea);
         avatararea.classList.add("area")
     avatararea.appendChild(avatarimg);
 
+        //MID DIVS
+
     firstdivmidarea.appendChild(nickarea);
+    firstdivmidarea.appendChild(gameimgarea);
+        gameimgarea.classList.add("GameIconArea");
     nickarea.appendChild(usernick);
+
+        //RIGHT DIVS
 
     firstdivrightarea.appendChild(levelarea);
         levelarea.appendChild(leveltext);
@@ -75,6 +82,7 @@ function createAcard(userdata, leveldata) {
                 levelcirclein.appendChild(levelcircletext);
     firstdivrightarea.appendChild(badgearea);
     firstdivrightarea.appendChild(isActive);
+
     //firstdiv left area
 
     //avatar border colors
@@ -113,6 +121,7 @@ function createAcard(userdata, leveldata) {
     newImg.src = userdata.response.players[0].avatarfull;
 
     avatarimg.classList.add('avatarCSS')
+    
     //firstdiv Mid area
 
     usernick.textContent = `${userdata.response.players[0].personaname}`
@@ -123,6 +132,7 @@ function createAcard(userdata, leveldata) {
 
 
     // level
+
     leveltext.textContent = "Level";
     levelcircletext.textContent = `${leveldata.response.player_level}`;
     levelcircle.classList.add("circleCSS");
@@ -130,7 +140,9 @@ function createAcard(userdata, leveldata) {
     levelcircletext.classList.add("circletext");
     leveltext.classList.add("leveltext");
     levelarea.classList.add("levelarea");
+
     //first digit of level
+
     const firstdigitlevel = String(leveldata.response.player_level)[0];
     switch (parseInt(firstdigitlevel)){
         case 0:
@@ -171,6 +183,27 @@ function createAcard(userdata, leveldata) {
             isActive.textContent = `Currently In-Game ${userdata.response.players[0].gameextrainfo}`
             isActive.classList.add("game-text-color")
 
+            const gameimg = document.createElement('img');
+
+            gameimgarea.appendChild(gameimg);
+            gameimg.classList.add('gameimg');
+
+            let filted = games.response.games.filter(function(el){
+                return el.appid == userdata.response.players[0].gameid
+            })
+
+            console.log(filted)
+            var GameIcon = new Image();
+            GameIcon.onload = function () {
+                gameimg.src = this.src;
+            }
+            if(filted[0].img_icon_url){
+                GameIcon.src = `http://media.steampowered.com/steamcommunity/public/images/apps/${filted[0].appid}/${filted[0].img_icon_url}.jpg`;
+            } else if(filted[0].img_logo_url){
+                GameIcon.src = `http://media.steampowered.com/steamcommunity/public/images/apps/${filted[0].appid}/${filted[0].img_logo_url}.jpg`;
+            } else{
+                GameIcon.src = `https://github.com/CilginSinek/Steam-Status-Card/blob/UnExpress/%C4%B0mages/UngameStatusimage.png`;
+            }
         }
         else{
             isActive.textContent = `Currently Online`
@@ -185,4 +218,4 @@ function createAcard(userdata, leveldata) {
 
 }
 
-createAcard(summary, level);
+createAcard(summary, level, mygame);
