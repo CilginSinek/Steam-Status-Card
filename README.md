@@ -20,10 +20,11 @@ add Your steamid64 and Steam Web API key
 <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/OfflineStatus.png"></img> <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/OnlineStatus.png"></img> <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/GameStatus.png"></img> <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/AwayStatus.png"></img>
 
 ### 450 width
+<img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/OfflineStatus450.png"></img> <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/OnlineStatus450.png"></img> <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/GameStatus450.png"></img> <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/AwayStatus450.png"></img>
 
 ## Description
 -I using https://corsproxy.io/ for cors
 
 I'm still trying to show badges icons but that's all for now :p
 If the game doesn't have an icon, my own icon will view.
-Themes and small version coming soon
+Themes version coming soon
