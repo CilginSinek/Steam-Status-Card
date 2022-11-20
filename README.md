@@ -16,14 +16,10 @@ let webkey = ""
 add Your steamid64 and Steam Web API key
 
 ## View
-### Offline
-<img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/OfflineStatus.png"></img>
-### Online
-<img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/OnlineStatus.png"></img>
-### On Game
-<img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/GameStatus.png"></img>
-### Away
-<img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/AwayStatus.png"></img>
+### 600 width
+<img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/OfflineStatus.png"></img> <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/OnlineStatus.png"></img> <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/GameStatus.png"></img> <img src="https://github.com/CilginSinek/steam-card/blob/UnExpress/%C4%B0mages/AwayStatus.png"></img>
+
+### 450 width
 
 ## Description
 -I using https://corsproxy.io/ for cors
