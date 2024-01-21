@@ -21,6 +21,7 @@ export default async function handler(req: NextRequest) {
   const steamHtml = await fetch(steamUrl);
 
   if (steamHtml.status !== 200) {
+    console.log(steamHtml)
     return new ImageResponse(<div>Error</div>);
   }
 
