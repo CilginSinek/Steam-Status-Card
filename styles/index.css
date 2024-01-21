@@ -43,20 +43,21 @@ body{
 p{
     margin: 0px;
 }
-.imgOnline{
-    background-color: #5da7c4;
+.imgSec{
+    display: flex;
     width: 85px;
     height: 87px;
+}
+.imgOnline{
+    background-color: #5da7c4;
+
 }
 .imgOffline{
     background-color: #b4b4b5;
-    width: 85px;
-    height: 87px;
+
 }
 .imgInGame{
     background-color: #9abe3b;
-    width: 85px;
-    height: 87px;
 }
 .online{
     color:#5da7c4

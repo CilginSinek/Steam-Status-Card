@@ -278,17 +278,22 @@ class steamUser {
       const name: string = $("bdi").first().text();
       const nickname: string = $(".actual_persona_name").first().text();
       const avatar: string = $(".playerAvatarAutoSizeInner")
-        .children()
+        .children("img")
         .attr("src");
       const countryDef = () => {
-        const countryString: string = $(".header_real_name.ellipsis")
-          .text()
-          .trim()
-          .split("\n")[3]
-          .split("\t\t\t\t\t\t\t\t\t\t\t\t")[1];
-        if (countryString) {
-          return countryString;
-        } else {
+        const nameAndCountry = $(".header_real_name.ellipsis")
+        if(nameAndCountry.children().length > 1){
+            const countryString: string = $(".header_real_name.ellipsis")
+            .text()
+            .trim()
+            .split("\n")[3]
+            .split("\t\t\t\t\t\t\t\t\t\t\t\t")[1];
+          if (countryString) {
+            return countryString;
+          } else {
+            return null;
+          }
+        }else{
           return null;
         }
       };

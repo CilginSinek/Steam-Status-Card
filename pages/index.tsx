@@ -4,8 +4,8 @@ export default function Page() {
   return (
     <div>
       <Head>
-        <meta name="og:title" content="Vercel Edge Network" />
-        <meta name="og:description" content="Vercel Edge Network" />
+        <meta name="og:title" content="Steam Web Card" />
+        <meta name="og:description" content="Steam Web Card with OG" />
         <meta
           name="og:image"
           content={
@@ -20,6 +20,7 @@ export default function Page() {
         />
       </Head>
       <h1>A page with Open Graph Image.</h1>
+      <p>use /api/card/?id=steamid</p>
     </div>
   )
 }
