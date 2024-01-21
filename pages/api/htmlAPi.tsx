@@ -2,8 +2,8 @@ import { NextRequest,NextResponse } from "next/server";
 import steamUser from "@/utils/steamUser";
 import axios from "axios";
 
+export const maxDuration = 13; 
 export const runtime = "nodejs";
-export const dynamic = 'force-dynamic';
 
 export default async function GET(request: NextRequest) {
     try{
@@ -27,6 +27,8 @@ export default async function GET(request: NextRequest) {
 
         return NextResponse.json({
             basicUser:basicUser
+        },{
+            status:200
         })
     }catch(err){
         return NextResponse.json({error:err})
