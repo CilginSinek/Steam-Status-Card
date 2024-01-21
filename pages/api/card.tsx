@@ -183,10 +183,6 @@ export default async function handler(req: NextRequest) {
     );
   } catch (err) {
     console.log(err)
-    return new ImageResponse(<div>{JSON.stringify(err)}</div>,
-    {
-      width: 360,
-      height: 250,
-    });
+    return Response.json(err)
   }
 }
