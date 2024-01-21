@@ -17,7 +17,7 @@ export default async function handler(
 
     const steamHtml = await axios.get("https://steamcommunity.com/id/"+id)
 
-    if(steamHtml.status){
+    if(steamHtml.status !== 200){
       response.status(401).json({ error: 'Steam Profile not found'});
     }
 
