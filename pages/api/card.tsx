@@ -20,7 +20,7 @@ export default async function handler(req: NextRequest) {
       });
     }
 
-    const steamData = await fetch("/api/htmlAPi?id=" + id)
+    const steamData = await fetch(process.env.URL +"/api/htmlAPi?id=" + id,{method:"GET"})
 
     if (steamData.status !== 200) {
       throw new Error("Steam html not found in fetch");
@@ -178,6 +178,7 @@ export default async function handler(req: NextRequest) {
       }
     );
   } catch (err) {
+    console.log(err)
     return new ImageResponse(<div>{JSON.stringify(err)}</div>,
     {
       width: 360,
