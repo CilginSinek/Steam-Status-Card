@@ -307,7 +307,7 @@ class steamUser {
         if (badgeDivs.length > 0) {
           const badgeArray: Array<badge["iconLink"]> = [];
 
-          badgeDivs.each(function (this:any,_i: any, item: any) {
+          badgeDivs.each(function (this:any ,_i: any, item: any) {
             const badgeIcon: string = $(this).children().children().attr("src");
             badgeArray.push(badgeIcon);
           });
