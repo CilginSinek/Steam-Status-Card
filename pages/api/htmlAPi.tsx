@@ -5,7 +5,7 @@ import axios from "axios";
 export const runtime = "nodejs";
 export const dynamic = 'force-dynamic';
 
-export async function GET(request: NextRequest) {
+export default async function GET(request: NextRequest) {
     try{
         const { searchParams } = request.nextUrl;
         const id = searchParams.get("id");
