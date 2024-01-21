@@ -23,7 +23,11 @@ export default async function handler(req: NextRequest) {
     const steamData = await fetch(process.env.URL +"/api/htmlAPi?id=" + id,{method:"GET"})
 
     if (steamData.status !== 200) {
-      throw new Error("Steam html not found in fetch");
+      return new ImageResponse(<div>Steam html not found in fetch</div>,
+      {
+        width: 360,
+        height: 250,
+      });
     }
 
     const AllData:any = await steamData.json();
