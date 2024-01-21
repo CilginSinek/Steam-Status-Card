@@ -10,23 +10,23 @@ export default async function GET(request: NextRequest) {
         const { searchParams } = request.nextUrl;
         const id = searchParams.get("id");
     
-        const steamHtml = await axios.get(`https://steamcommunity.com/id/${id}`).catch(er=>{
-            console.error(er)
-            throw er;
-        });
+        // const steamHtml = await fetch(`https://steamcommunity.com/id/${id}`).catch(er=>{
+        //     console.error(er)
+        //     throw er;
+        // });
 
-        if (steamHtml.status !== 200) {
-            throw new Error("Steam html not found in fetch");
-        }
+        // if (steamHtml.status !== 200) {
+        //     throw new Error("Steam html not found in fetch");
+        // }
 
-        const htmlData = steamHtml.data;
+        // const htmlData = await steamHtml.text();
 
         // const steam = new steamUser(htmlData);
 
         // const basicUser = steam.getBasicProfile();
 
         return NextResponse.json({
-            htmlData:htmlData
+            id:id
         },{
             status:200
         })
