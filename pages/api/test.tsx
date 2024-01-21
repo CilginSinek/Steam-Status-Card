@@ -11,8 +11,8 @@ export default async function handler(req: NextRequest) {
     const steamHtml = await fetch(`https://steamcommunity.com/id/${id}`).catch(er=>{return er;});
 
     return new ImageResponse(
-        <div>
-            <p>{JSON.stringify(steamHtml)}</p>
+        <div style={{display:"flex"}} >
+            <p style={{display:"flex"}} >{JSON.stringify(steamHtml)}</p>
         </div>
     )
 }
