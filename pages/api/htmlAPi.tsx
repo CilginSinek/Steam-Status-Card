@@ -21,12 +21,12 @@ export default async function GET(request: NextRequest) {
 
         const htmlData = steamHtml.data;
 
-        const steam = new steamUser(htmlData);
+        // const steam = new steamUser(htmlData);
 
-        const basicUser = steam.getBasicProfile();
+        // const basicUser = steam.getBasicProfile();
 
         return NextResponse.json({
-            basicUser:basicUser
+            htmlData:htmlData
         },{
             status:200
         })
