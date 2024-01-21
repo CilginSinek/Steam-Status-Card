@@ -3,6 +3,7 @@ import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
 import steamUser from "@/utils/steamUser";
 import style from "@/styles/style";
+import { basicUserInfo } from "@/utils/types";
 
 export const runtime = "edge";
 
@@ -18,18 +19,16 @@ export default async function handler(req: NextRequest) {
         height: 630,
       });
     }
-    const steamUrl = `https://steamcommunity.com/id/${id}`;
-    const steamHtml = await fetch(steamUrl).catch(er=>{throw er;});
 
-    if (steamHtml.status !== 200) {
+    const steamData = await fetch("/api/htmlAPi?id=" + id)
+
+    if (steamData.status !== 200) {
       throw new Error("Steam html not found in fetch");
     }
 
-    const htmlData = await steamHtml.text();
+    const AllData:any = await steamData.json();
 
-    const steam = new steamUser(htmlData);
-
-    const basicUser = steam.getBasicProfile();
+    const basicUser: basicUserInfo = AllData.basicUser;
 
     const mainLevelDef = () => {
       if (basicUser.userInfo.level >= 100) {
