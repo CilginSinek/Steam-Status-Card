@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
-import steamUser from "@/utils/steamUser";
 import style from "@/styles/style";
 import { basicUserInfo } from "@/utils/types";
 
@@ -75,12 +74,12 @@ export default async function handler(req: NextRequest) {
                     : style.imgOffline),
                 }}
               >
-                <img
+                {/* <img
                   className="avatar"
                   style={style.avatar}
                   src={basicUser.userInfo.avatar}
                   alt="Avatar"
-                />
+                /> */}
               </div>
               <div className="nameSec" style={style.nameSec}>
                 <h2
@@ -129,7 +128,7 @@ export default async function handler(req: NextRequest) {
                 </span>
               </div>
               <span>
-                <img
+                {/* <img
                   className="MainBadge"
                   style={style.MainBadge}
                   src={
@@ -138,7 +137,7 @@ export default async function handler(req: NextRequest) {
                       : "https://static.thenounproject.com/png/1738131-200.png"
                   }
                   alt="MainBadge"
-                />
+                /> */}
               </span>
             </div>
           </div>

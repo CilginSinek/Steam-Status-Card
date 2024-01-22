@@ -26,7 +26,7 @@ export default async function handler(
   const basicProfile = steam.getBasicProfile();
 
   response.setHeader("Access-Control-Allow-Origin", "*");
-  response.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST");
+  response.setHeader("Access-Control-Allow-Methods", "GET");
   response.setHeader(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
