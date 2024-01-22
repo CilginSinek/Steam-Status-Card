@@ -15,7 +15,15 @@ export default async function handler(
     response.status(401).json({ error: "No id provided" });
   }
 
-  const steamHtml = await axios.get("https://steamcommunity.com/id/" + id);
+  const getSteamHtlm = async(myid:string)=>{
+    if(/^\d+$/.test(myid)){
+      return await axios.get("https://steamcommunity.com/profiles/" + myid);
+    }else{
+      return await axios.get("https://steamcommunity.com/id/" + myid);
+    }
+  }
+
+  const steamHtml = await getSteamHtlm(id as string);
 
   if (steamHtml.status !== 200) {
     response.status(401).json({ error: "Steam Profile not found" });
