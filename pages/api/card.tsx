@@ -74,12 +74,12 @@ export default async function handler(req: NextRequest) {
                     : style.imgOffline),
                 }}
               >
-                {/* <img
+                <img
                   className="avatar"
                   style={style.avatar}
                   src={basicUser.userInfo.avatar}
                   alt="Avatar"
-                /> */}
+                />
               </div>
               <div className="nameSec" style={style.nameSec}>
                 <h2
