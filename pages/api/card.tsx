@@ -128,7 +128,7 @@ export default async function handler(req: NextRequest) {
                 </span>
               </div>
               <span>
-                {/* <img
+                <img
                   className="MainBadge"
                   style={style.MainBadge}
                   src={
@@ -137,7 +137,7 @@ export default async function handler(req: NextRequest) {
                       : "https://static.thenounproject.com/png/1738131-200.png"
                   }
                   alt="MainBadge"
-                /> */}
+                />
               </span>
             </div>
           </div>
