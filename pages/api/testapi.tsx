@@ -19,7 +19,7 @@ export default async function handler(req: NextRequest) {
       });
     }
 
-    const steamData = await fetch(process.env.URL + "/api/htmlAPi?id=" + id, {
+    const steamData = await fetch(process.env.URL + "/api/htmlApi?id=" + id, {
       method: "GET",
     });
 
