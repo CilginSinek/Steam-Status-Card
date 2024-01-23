@@ -14,6 +14,7 @@ export default async function handler(req: NextRequest) {
             <div style={style.info}>
               <div style={{ ...style.imgSec, ...style.imgOnline }}>
                 <img
+                  style={style.avatar}
                   src="https://avatars.akamai.steamstatic.com/a691782e9df50a0a5052ba0edb8df5b1789906a0_full.jpg"
                   alt="avatar"
                 />
