@@ -7,32 +7,32 @@ import { basicUserInfo } from "@/utils/types";
 export const runtime = "edge";
 
 export default async function handler(req: NextRequest) {
-  try{
+  try {
     const { searchParams } = req.nextUrl;
     const id = searchParams.get("id");
     const costumeComponent = searchParams.get("costume");
-  
+
     if (!id) {
       return new ImageResponse(<>{'Visit with "?id=vercel"'}</>, {
         width: 1200,
         height: 630,
       });
     }
-  
+
     const steamData = await fetch(process.env.URL + "/api/htmlApi?id=" + id, {
       method: "GET",
     });
-  
+
     if (steamData.status !== 200) {
       return Response.json({
         error: "Steam Profile not found",
       });
     }
-  
+
     const AllData: any = await steamData.json();
-  
+
     const basicUser: basicUserInfo = AllData.basicUser;
-  
+
     const mainLevelDef = () => {
       if (basicUser.userInfo.level >= 100) {
         return Math.floor(basicUser.userInfo.level / 100) * 100;
@@ -40,9 +40,9 @@ export default async function handler(req: NextRequest) {
         return Math.floor(basicUser.userInfo.level / 10) * 10;
       }
     };
-  
+
     const levelClass = style["friendPlayerLevel_lvl_" + mainLevelDef()];
-  
+
     const heightFunc = () => {
       if (basicUser.status.statusType === "In-Game") {
         return 250;
@@ -50,7 +50,7 @@ export default async function handler(req: NextRequest) {
         return 127;
       }
     };
-  
+
     const userNameFunc = (mystr: string) => {
       if (mystr.length > 16) {
         return mystr.substring(0, 13) + "...";
@@ -58,7 +58,7 @@ export default async function handler(req: NextRequest) {
         return mystr;
       }
     };
-  
+
     return new ImageResponse(
       (
         <div className="card container" style={style.card}>
@@ -127,8 +127,9 @@ export default async function handler(req: NextRequest) {
                   {basicUser.userInfo.level}
                 </span>
               </div>
-              <img
-                className="MainBadge"
+              {basicUser.userInfo.mainBadge != null && (
+                <img
+                  className="MainBadge"
                   style={style.MainBadge}
                   src={
                     basicUser.userInfo.mainBadge
@@ -136,7 +137,8 @@ export default async function handler(req: NextRequest) {
                       : "https://static.thenounproject.com/png/1738131-200.png"
                   }
                   alt="MainBadge"
-              />
+                />
+              )}
             </div>
           </div>
           {basicUser.status.statusGame &&
@@ -178,8 +180,7 @@ export default async function handler(req: NextRequest) {
         height: heightFunc(),
       }
     );
-  }catch(e){
-    Response.json({error:e})
+  } catch (e) {
+    Response.json({ error: e });
   }
-
 }
