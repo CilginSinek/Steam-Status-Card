@@ -1,3 +1,5 @@
 Steam web card with vercel
 
-/api/card?username=Steamid
+/api/card?id=Steamid;
+
+[![SteamCard](https://steam-status-card.vercel.app/api/card?id=CilginSinek)](https://steam-status-card.vercel.app/api/card?id=CilginSinek)
