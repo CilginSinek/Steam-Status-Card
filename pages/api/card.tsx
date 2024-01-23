@@ -12,10 +12,11 @@ export default async function handler(req: NextRequest) {
     const id = searchParams.get("id");
     const costumeComponent = searchParams.get("costume");
 
+
     if (!id) {
       return new ImageResponse(<>{'Visit with "?id=vercel"'}</>, {
-        width: 1200,
-        height: 630,
+        width: 360,
+        height: 250,
       });
     }
 
@@ -24,8 +25,9 @@ export default async function handler(req: NextRequest) {
     });
 
     if (steamData.status !== 200) {
-      return Response.json({
-        error: "Steam Profile not found",
+      return new ImageResponse(<>{'error: Steam Profile not found'}</>, {
+        width: 360,
+        height: 250,
       });
     }
 
@@ -178,6 +180,12 @@ export default async function handler(req: NextRequest) {
       {
         width: 360,
         height: heightFunc(),
+        headers:{
+          'content-type': 'image/png',
+          'cache-control': 'public, immutable, no-transform, max-age=10',
+          'CDN-Cache-Control': 'max-age=60',
+          'Vercel-CDN-Cache-Control': 'max-age=3600'
+        }
       }
     );
   } catch (e) {
