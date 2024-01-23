@@ -127,9 +127,8 @@ export default async function handler(req: NextRequest) {
                   {basicUser.userInfo.level}
                 </span>
               </div>
-              <span>
-                <img
-                  className="MainBadge"
+              <img
+                className="MainBadge"
                   style={style.MainBadge}
                   src={
                     basicUser.userInfo.mainBadge
@@ -137,8 +136,7 @@ export default async function handler(req: NextRequest) {
                       : "https://static.thenounproject.com/png/1738131-200.png"
                   }
                   alt="MainBadge"
-                />
-              </span>
+              />
             </div>
           </div>
           {basicUser.status.statusGame &&
