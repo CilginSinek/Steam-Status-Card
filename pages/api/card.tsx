@@ -182,9 +182,9 @@ export default async function handler(req: NextRequest) {
         height: heightFunc(),
         headers:{
           'content-type': 'image/png',
-          'cache-control': 'public, immutable, no-transform, max-age=10',
-          'CDN-Cache-Control': 'max-age=10',
-          'Vercel-CDN-Cache-Control': 'max-age=10'
+          'cache-control': 'public, immutable, no-transform, max-age=600',
+          'CDN-Cache-Control': 'max-age=600',
+          'Vercel-CDN-Cache-Control': 'max-age=600'
         }
       }
     );
